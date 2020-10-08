@@ -1,0 +1,23 @@
+img {
+  height: 60px;
+}
+
+/*  Responsive navbar 
+@media all and (max-width: 1024px) {
+  .navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+
+    align-items: center;
+  }
+}*/
+
+.footer {
+  background-color: gray;
+  bottom: 0;
+  color: #fff;
+  left: 0;
+  width: 100%;
+
+  text-align: center;
+}

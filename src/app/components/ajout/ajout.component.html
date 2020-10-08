@@ -1,0 +1,47 @@
+<div class="jumbotron">
+  <h1>Ajouter un produit</h1>
+</div>
+<div
+  *ngIf="alert"
+  class="alert alert-success alert-dismissible fade show"
+  role="alert"
+>
+  <strong>success!</strong> le produit a bien été ajouté .
+  <button
+    (click)="fermerAlert()"
+    type="button"
+    class="close"
+    data-dismiss="alert"
+    aria-label="Close"
+  >
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<form [formGroup]="addProduit" (ngSubmit)="creerProduit()">
+  <div class="form-group">
+    <label>Id</label>
+    <input type="hidden" class="form-control" formControlName="_id" />
+  </div>
+  <div>
+    <label>Nom</label>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="saisissez le nom du produit "
+      formControlName="name"
+    />
+  </div>
+  <div class="form-group">
+    <label>status</label>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Ex : non acheté"
+      formControlName="status"
+    />
+  </div>
+
+  <button type="submit" value="Enregistrer" class="btn btn-primary">
+    enregistrer
+  </button>
+</form>

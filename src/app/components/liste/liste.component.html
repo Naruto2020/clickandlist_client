@@ -1,0 +1,54 @@
+<div class="jumbotron">
+  <h1>Liste des produits</h1>
+</div>
+
+<div
+  *ngIf="alert"
+  class="alert alert-success alert-dismissible fade show"
+  role="alert"
+>
+  <strong>success!</strong> le produit a bien été supprimé .
+  <button
+    (click)="fermerAlert()"
+    type="button"
+    class="close"
+    data-dismiss="alert"
+    aria-label="Close"
+  >
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nom</th>
+      <th scope="col">Status</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let produit of listesProd">
+      <td>{{ produit.name }}</td>
+      <td>{{ produit.status }}</td>
+
+      <td>
+        <button>
+          <i
+            routerLink="/update/{{ produit._id }}"
+            class="fa fa-edit"
+            style="font-size: 20px; color: green"
+          ></i>
+        </button>
+        &nbsp; &nbsp;
+        <button (click)="cancelProduit()">
+          <i
+            routerLink="/liste/{{ produit._id }}"
+            class="fa fa-trash"
+            style="font-size: 20px; color: red"
+          ></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

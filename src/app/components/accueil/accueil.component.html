@@ -1,0 +1,59 @@
+<main role="main">
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">Bienvenue sur Click&List!</h1>
+      <p>
+        Ceci est une application de liste de courses facile à prendre en main
+        très pratique et interactive. Bon shopping !
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Ajouter un produit</h2>
+        <p>
+          cliquez et ajouter tous ce dont vous aurrez besoins pour vos
+          prochaines courses sinon clickez sur nouveau produit dans le menu
+          principale
+        </p>
+        <p>
+          <a class="btn btn-secondary" routerLink="/ajout" role="button"
+            >Voir details &raquo;</a
+          >
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h2>Consulter votre liste</h2>
+        <p>
+          cliquez et verrifier votre liste pour vos prochaines courses sinon
+          clickez sur liste dans le menu principale
+        </p>
+        <p>
+          <a class="btn btn-secondary" routerLink="/liste/:_id" role="button"
+            >Voir details &raquo;</a
+          >
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h2>Modifier ou Suprimer un produit</h2>
+        <p>
+          cliquez, modifier ou supprimer tous ce dont vous n'aurrez plus besoins
+          pour vos prochaines courses sinon clickez sur liste dans le menu
+          principale
+        </p>
+        <p>
+          <a class="btn btn-secondary" routerLink="/liste/:id" role="button"
+            >Voir details &raquo;</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <hr />
+  </div>
+  <!-- /container -->
+</main>
